@@ -7,7 +7,7 @@ Feature: Registro de Usuarios
     Then se crea una cuenta con éxito y se le redirige a la página de inicio de sesión
 
     Examples:
-      | Escenario        | Nombre de Usuario     | Correo Electrónico     | Contraseña       |
+      | Escenario        | Nombre de Usuario     | Correo Electrónico      | Contraseña       |
       |------------------|------------------------|------------------------|------------------|
       | Escenario 1      | usuario1               | usuario1@example.com   | Password123!     |
       | Escenario 2      | usuario2               | usuario2@example.com   | SecurePass123!   |
@@ -46,6 +46,7 @@ Feature: Registro de Usuarios
 
     Examples:
       | username          | email                  | password         | output                      |
+      |-------------------|------------------------|------------------|-----------------------------|
       | usuario1          | usuario1@example.com   | Password123!     | Código de estado: 200, DTO  |
       | usuario2          | usuario2@example.com   | SecurePass123!   | Código de estado: 200, DTO  |
 
@@ -63,5 +64,6 @@ Feature: Registro de Usuarios
 
     Examples:
       | username          | password         | output                                  |
+      |-------------------|------------------|-----------------------------------------|
       | usuario3          | Password123!     | Código de estado: 400, Mensaje de error |
       | usuario4          | SecurePass123!   | Código de estado: 400, Mensaje de error |
