@@ -45,7 +45,7 @@ Feature: Registro de Usuarios
       """
 
     Examples:
-      | Nombre de Usuario | Correo Electrónico     | Contraseña       | Output Esperado             |
+      | username          | email                  | password         | output                      |
       | usuario1          | usuario1@example.com   | Password123!     | Código de estado: 200, DTO  |
       | usuario2          | usuario2@example.com   | SecurePass123!   | Código de estado: 200, DTO  |
 
@@ -62,6 +62,6 @@ Feature: Registro de Usuarios
     Y la respuesta contiene un mensaje de error
 
     Examples:
-      | Nombre de Usuario | Contraseña       | Output Esperado                         |
+      | username          | password         | output                                  |
       | usuario3          | Password123!     | Código de estado: 400, Mensaje de error |
       | usuario4          | SecurePass123!   | Código de estado: 400, Mensaje de error |
